@@ -7,6 +7,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.search-box{
+  height: 50px;
+}
+
 .sidebar {
     padding: 15px;
     position: absolute;
@@ -19,8 +23,7 @@ body {
 }
 
 .legend h1 {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin: 10px;
     font-size: 16px;
     color: rgb(7, 7, 7);
 }
