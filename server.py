@@ -10,7 +10,7 @@ def import_data(type):
         data["latitudes"] = json.load(json_file)
     with open(f"./data/{type}_data/longitudes.json", 'r') as json_file:
         data["longitudes"] = json.load(json_file)
-    return
+    return data
 
 @app.route('/', methods = ["GET"])
 def main():
@@ -18,11 +18,12 @@ def main():
 
     data["crimes"] = import_data("crimes")
     data["covid"] = import_data("covid")
-    data["crushes"] = import_data("crushes")
+    #data["crushes"] = import_data("crushes")
+    data["shootings"] = import_data("shootings")
 
     return render_template("index.html", data = data)
 
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(host = "0.0.0.0", debug = True)
