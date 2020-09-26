@@ -44,7 +44,7 @@ body {
 }
   
 
-form.example input[type=text] {
+form.userinput input[type=text] {
     padding: 10px;
     height: 50px;
     font-size: 17px;
@@ -54,12 +54,12 @@ form.example input[type=text] {
     background: #f1f1f1;
 }
 
-form.example button {
+form.userinput button {
     float: left;
     height: 50px;
     width: 20%;
     padding: 10px;
-    background: #2196F3;
+    background: hsl(207, 90%, 54%);
     color: white;
     font-size: 17px;
     border: 1px solid grey;
@@ -67,11 +67,11 @@ form.example button {
     cursor: pointer;
 }
   
-form.example button:hover {
+form.userinput button:hover {
     background: #0b7dda;
 }
 
-form.example::after {
+form.userinput::after {
     content: "";
     clear: both;
     display: table;
