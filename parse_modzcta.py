@@ -2,6 +2,7 @@ import os
 import json
 import googlemaps
 import random
+import simplejson
 gmaps = googlemaps.Client(key=os.getenv('GOOGLE_API_KEY'))
 
 
@@ -33,17 +34,16 @@ def read_csv_modzcta():
                 lat.append(random.uniform(small_lat, large_lat))
                 lng.append(random.uniform(small_lng, large_lng))
 
-    with open('dataset/COVID-19/parse_covid_data.json', 'w') as outfile:
-        json.dump(modzcta, outfile)
-        outfile.close()
-    with open('dataset/latitude.txt', 'w') as f:
-        for l in lat:
-            f.write("%s\n" % l)
+    # with open('dataset/COVID-19/parse_covid_data.json', 'w') as outfile:
+    #     json.dump(modzcta, outfile)
+    #     outfile.close()
+    with open('dataset/COVID-19/latitude.txt', 'w') as f:
+        simplejson.dump(lat, f)
         f.close()
-    with open('dataset/longitude.txt', 'w') as f:
-        for l in lng:
-            f.write("%s\n" % l)
+    with open('dataset/COVID-19/longitude.txt', 'w') as f:
+        simplejson.dump(lat, f)
         f.close()
+
 
 def read_parse_covid_data():
     lat = []
