@@ -21,13 +21,13 @@ body {
     width: 25%;
     background-color:#f7f7f7;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
-    height: 220px;
+    height: 350px;
     border-radius: 15px;
 }
 
 .legend h1 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 16px;
     color: rgb(7, 7, 7);
 }
@@ -120,7 +120,8 @@ form.userinput::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: white;
+    box-shadow: 0 0 1px #2196F3;
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -133,17 +134,17 @@ form.userinput::after {
     left: 2px;
     right: 2px;
     bottom: 2px;
-    background-color: white;
+    background-color: #2196Fe;
     -webkit-transition: .4s;
     transition: .4s;
 }
   
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: white;
 }
   
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    background-color: #eeeeee;
 }
   
 input:checked + .slider:before {
@@ -158,28 +159,4 @@ input:checked + .slider:before {
   
 .slider.round:before {
     border-radius: 50%;
-}
-.fa span {
-    position: absolute;
-    z-index: 10;
-    display:none;
-    padding:14px 20px;
-    margin-top:-30px;
-    margin-left:28px;
-    width:300px;
-    line-height:16px;
-}
-
-.fa:hover span {
-    display: flex;
-    position:absolute;
-    cursor: pointer;
-    color:#111;
-    border:1px solid #DCA;
-    background:#fffAF0;
-}
-
-.fa span {
-    border-radius:4px;
-    box-shadow: 5px 5px 8px #CCC;
 }

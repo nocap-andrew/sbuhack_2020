@@ -49,21 +49,19 @@
                         <input type="text" placeholder="Address..." name="address" id="address">
                         <button type="submit"><i class="fa fa-search"></i></button>
                 </div>
-            </form>
                 <div class="legend">
                     <h1 class="legend-header">Legend:</h1>
                     <ul>
                         <li class="legend-item">
                             <div class="inline for-switch">
                                 <label class="switch">
-                                    <input type="checkbox" name="covid_toggle" id="covid_toggle" checked = "true" onchange="toggleGroup('covid')">
+                                    <input type="checkbox" name="covid_toggle" id="covid_toggle" onchange="toggleGroup('covid')">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
                             <div class="inline name">COVID-19 Heat Map</div>
                             <div class="inline description">
-                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);">
-                                    <span class="tooltiptext">Show COVID-19 Heat Map based on reported cases of virus infection.</span>
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="showGif();">
                                 </i>
                             </div>
                         </li>
@@ -76,8 +74,7 @@
                             </div>
                             <div class="inline name">Crime Rate Heat Map</div>
                             <div class="inline description">
-                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);">
-                                    <span class="tooltiptext">Show Crime Rate Heat Map based on Police reports and complaints.</span>
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="showGif();">
                                 </i>
                             </div>
                         </li>
@@ -88,19 +85,39 @@
                                     <span class="slider round"></span>
                                 </label>
                             </div>
-                            <div class="inline name">Hospitals</div>
+                            <div class="inline name">Motor Vehicle Craches</div>
                             <div class="inline description">
-                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);">
-                                    <span class="tooltiptext">Show Hospitals equiped for COVID-19 treatment</span>
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="showGif();">
+                                </i>
+                            </div>
+                        </li>
+                        <li class="legend-item">
+                            <div class="inline for-switch">
+                                <label class="switch">
+                                    <input type="checkbox" name="hospital_toggle" id = "hospital_toggle" onchange="">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="inline name">Shooting Incidents</div>
+                            <div class="inline description">
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="showGif();">
                                 </i>
                             </div>
                         </li>
                     </ul>
                 </div>
+            </form>
             </div>
         </div>
 
         <div class="map" id="main_map"></div>
+
+        <script>
+            function showGif() {
+                helper = document.getElementById("helper");
+                helper.style.display = "block";
+            }
+        </script>
 
         <script>
             function initMap() {
@@ -117,7 +134,6 @@
                   '#e45252',
                   '#ce3838',
                 );
-                toggleGroup('crime');
 
                 markerGroups["covid"] = createMarkers( map,
                   {{ covid["latitudes"]|safe }},
