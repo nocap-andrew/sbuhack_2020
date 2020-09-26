@@ -22,14 +22,6 @@ def main():
 
     return render_template("index.html", crimes = crimes, covid = covid)
 
-@app.route('/address', methods = ["POST"])
-def handle_address():
-    user_address = request.form['address']
-    crime_toggle = request.form['crime_toggle']
-    covid_toggle = request.form['covid_toggle']
-    hospital_toggle = request.form['hospital_toggle']
-    print(user_address, crime_toggle, covid_toggle, hospital_toggle)
-
 
 
 if __name__ == "__main__":

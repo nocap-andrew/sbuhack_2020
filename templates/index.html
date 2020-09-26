@@ -11,7 +11,7 @@
     </head>
     <body>
       <script>
-        function createMarkers(map, long, lat, fillColor, strokeColor) {
+        function createMarkers(map, lat, long, fillColor, strokeColor) {
           markers = [];
           len = Math.min(lat.length, long.length)
           for (var i = 0; i < len; i++) {
@@ -100,7 +100,7 @@
             </div>
         </div>
 
-        <div class="map" id="map"></div>
+        <div class="map" id="main_map"></div>
 
         <script>
             function initMap() {
@@ -109,9 +109,7 @@
                     center: {lat:40.7128, lng:-73.9060}
                 }
 
-                var map = new google.maps.Map(document.getElementById('map'), options);
-
-                console.log("map init");
+                var map = new google.maps.Map(document.getElementById('main_map'), options);
 
                 markerGroups["crime"] = createMarkers( map,
                   {{ crimes["latitudes"]|safe }},
