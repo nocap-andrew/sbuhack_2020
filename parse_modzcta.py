@@ -7,7 +7,7 @@ gmaps = googlemaps.Client(key=os.getenv('GOOGLE_API_KEY'))
 
 def read_csv_modzcta():
     modzcta = {}
-    with open('dataset/data_by_modzcta.csv', 'r') as data:
+    with open('dataset/COVID-19/data_by_modzcta.csv', 'r') as data:
         data.readline().split(',')
         lines = data.readlines()
         for line in lines:
@@ -23,7 +23,7 @@ def read_csv_modzcta():
             data["LOCATION"] = location
             modzcta[line[1]] = data
 
-    with open('dataset/parse_covid_data.json', 'w') as outfile:
+    with open('dataset/COVID-19/parse_covid_data.json', 'w') as outfile:
         json.dump(modzcta, outfile)
         outfile.close()
 
@@ -31,7 +31,7 @@ def read_csv_modzcta():
 def read_parse_covid_data():
     lat = []
     lng = []
-    with open('dataset/parse_covid_data.json', 'r') as json_file:
+    with open('dataset/COVID-19/parse_covid_data.json', 'r') as json_file:
         data = json.load(json_file)
         for key in data:
             lng.append(data[key]["LOCATION"]["LNG"])
