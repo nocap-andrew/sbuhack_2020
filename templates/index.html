@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>SBUHack Demo</title>
+        <!--
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+        -->
+        <link rel= "stylesheet" type= "text/css" href= "../static/styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <header>
+        </header>
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="search-box">
+                    <form class="example">
+                        <input type="text" placeholder="Address..." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="legend">
+                    <h1 class="legend-header">Legend:</h1>
+                    <ul>
+                        <li class="legend-item">
+                            <div class="inline for-switch">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="inline name">COVID-19 Heat Map</div>
+                            <div class="inline description">
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);">
+                                    <span class="tooltiptext">Show COVID-19 Heat Map based on reported cases of virus infection.</span>
+                                </i>
+                            </div>
+                        </li>
+                        <li class="legend-item">
+                            <div class="inline for-switch">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="inline name">Crime Rate Heat Map</div>
+                            <div class="inline description">
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);">
+                                    <span class="tooltiptext">Show Crime Rate Heat Map based on Police reports and complaints.</span>
+                                </i>
+                            </div>
+                        </li>
+                        <li class="legend-item">
+                            <div class="inline for-switch">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="inline name">Hospitals</div>
+                            <div class="inline description">
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);">
+                                    <span class="tooltiptext">Show Hospitals equiped for COVID-19 treatment</span>
+                                </i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="map" id="map"></div>
+        
+        <script>
+            function initMap() {
+                var options = {
+                    zoom: 8,
+                    center: {lat:40.7128, lng:-74.0060}
+                }
+
+                var map = new google.maps.Map(document.getElementById('map'), options);
+            }
+        </script>
+
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKncgQLNzwyLXrvHW-S4ptv-ahJE8MUOE&callback=initMap">
+      </script>
+
+    </body>
+</html>
