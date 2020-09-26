@@ -7,22 +7,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.wrapper {
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
 .sidebar {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
     position: absolute;
     z-index: 1;
     width: 25%;
     background-color:#f7f7f7;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
-    height: 350px;
     border-radius: 15px;
+    margin: 15px;
 }
 
 .legend h1 {
@@ -42,7 +35,7 @@ body {
     width: 1em;
     margin-left: -1em;
 }
-  
+
 
 form.userinput input[type=text] {
     padding: 10px;
@@ -66,7 +59,7 @@ form.userinput button {
     border-left: none;
     cursor: pointer;
 }
-  
+
 form.userinput button:hover {
     background: #0b7dda;
 }
@@ -125,7 +118,7 @@ form.userinput::after {
     -webkit-transition: .4s;
     transition: .4s;
 }
-  
+
 .slider:before {
     position: absolute;
     content: "";
@@ -138,15 +131,15 @@ form.userinput::after {
     -webkit-transition: .4s;
     transition: .4s;
 }
-  
+
 input:checked + .slider {
     background-color: white;
 }
-  
+
 input:focus + .slider {
     background-color: #eeeeee;
 }
-  
+
 input:checked + .slider:before {
     -webkit-transform: translateX(12px);
     -ms-transform: translateX(12px);
@@ -156,7 +149,7 @@ input:checked + .slider:before {
 .slider.round {
     border-radius: 10px;
 }
-  
+
 .slider.round:before {
     border-radius: 50%;
 }
