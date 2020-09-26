@@ -15,8 +15,10 @@ def read_parse_hospital():
                 lng.append(float(line[18]))
     with open('dataset/hospital_latitude.txt', 'w') as f:
         simplejson.dump(lat, f)
+        f.close()
     with open('dataset/hospital_longitude.txt', 'w') as f:
         simplejson.dump(lng, f)
+        f.close()
 
 
 if __name__ == "__main__":

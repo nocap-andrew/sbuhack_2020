@@ -25,6 +25,7 @@ def read_csv_modzcta():
 
     with open('dataset/parse_covid_data.json', 'w') as outfile:
         json.dump(modzcta, outfile)
+        outfile.close()
 
 
 def read_parse_covid_data():
@@ -35,14 +36,15 @@ def read_parse_covid_data():
         for key in data:
             lng.append(data[key]["LOCATION"]["LNG"])
             lat.append(data[key]["LOCATION"]["LAT"])
-
+        json_file.close()
     with open('dataset/latitude.txt', 'w') as f:
         for l in lat:
             f.write("%s\n" % l)
-
+        f.close()
     with open('dataset/longitude.txt', 'w') as f:
         for l in lng:
             f.write("%s\n" % l)
+        f.close()
 
 
 if __name__ == "__main__":
