@@ -49,13 +49,14 @@
                         <input type="text" placeholder="Address..." name="address" id="address">
                         <button type="submit"><i class="fa fa-search"></i></button>
                 </div>
+            </form>
                 <div class="legend">
                     <h1 class="legend-header">Legend:</h1>
                     <ul>
                         <li class="legend-item">
                             <div class="inline for-switch">
                                 <label class="switch">
-                                    <input type="checkbox" name="covid_toggle" id="covid_toggle" onchange="toggleGroup('covid')">
+                                    <input type="checkbox" name="covid_toggle" id="covid_toggle" checked = "true" onchange="toggleGroup('covid')">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -96,7 +97,6 @@
                         </li>
                     </ul>
                 </div>
-            </form>
             </div>
         </div>
 
@@ -117,6 +117,7 @@
                   '#e45252',
                   '#ce3838',
                 );
+                toggleGroup('crime');
 
                 markerGroups["covid"] = createMarkers( map,
                   {{ covid["latitudes"]|safe }},
