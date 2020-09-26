@@ -58,7 +58,7 @@
                             </div>
                             <div class="inline name">COVID-19 Heat Map</div>
                             <div class="inline description">
-                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="showGif();">
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="">
                                 </i>
                             </div>
                         </li>
@@ -71,7 +71,7 @@
                             </div>
                             <div class="inline name">Crime Rate Heat Map</div>
                             <div class="inline description">
-                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="showGif();">
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="">
                                 </i>
                             </div>
                         </li>
@@ -85,24 +85,24 @@
                             </div>
                             <div class="inline name">Motor Vehicle Craches</div>
                             <div class="inline description">
-                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="showGif();">
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="">
                                 </i>
                             </div>
                         </li>
+-->
                         <li class="legend-item">
                             <div class="inline for-switch">
                                 <label class="switch">
-                                    <input type="checkbox" name="hospital_toggle" id = "hospital_toggle" onchange="">
+                                    <input type="checkbox" name="hospital_toggle" id = "hospital_toggle" onchange="toggleGroup('crime')">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
                             <div class="inline name">Shooting Incidents</div>
                             <div class="inline description">
-                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="showGif();">
+                                <i class="fa fa-question-circle" style="color: rgb(150, 150, 150);" onclick="">
                                 </i>
                             </div>
                         </li>
--->
                     </ul>
                 </div>
             </form>
@@ -110,13 +110,6 @@
         </div>
 
         <div class="map" id="main_map"></div>
-
-        <script>
-            function showGif() {
-                helper = document.getElementById("helper");
-                helper.style.display = "block";
-            }
-        </script>
 
         <script>
             function initMap() {

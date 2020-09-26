@@ -19,6 +19,7 @@ def main():
     data["crimes"] = import_data("crimes")
     data["covid"] = import_data("covid")
     #data["crushes"] = import_data("crushes")
+    data["shootings"] = import_data("shootings")
 
     return render_template("index.html", data = data)
 
