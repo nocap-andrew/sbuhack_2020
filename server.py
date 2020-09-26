@@ -8,15 +8,21 @@ app = Flask(__name__)
 @app.route('/', methods = ["GET"])
 
 def main():
-    with open("C:/Users/andre/Desktop/SBUHack/data/latitudes.json", 'r') as json_file:
-        latitudes = json.load(json_file)
-    with open("C:/Users/andre/Desktop/SBUHack/data/longtitudes.json", 'r') as json_file:
-        longtitudes = json.load(json_file)
+    crimes = {}
+    with open("./data/latitudes.json", 'r') as json_file:
+        crimes["latitudes"] = json.load(json_file)
+    with open("./data/longtitudes.json", 'r') as json_file:
+        crimes["longtitudes"] = json.load(json_file)
 
-    return render_template("index.html")
+    covid = {}
+    with open("./dataset/latitudes.json", 'r') as json_file:
+        covid["latitudes"] = json.load(json_file)
+    with open("./dataset/longtitudes.json", 'r') as json_file:
+        covid["longtitudes"] = json.load(json_file)
+
+    return render_template("index.html", crimes = crimes, covid = covid)
 
 @app.route('/address', methods = ["POST"])
-
 def handle_address():
     user_address = request.form['address']
     crime_toggle = request.form['crime_toggle']
