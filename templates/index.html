@@ -111,6 +111,9 @@
 
         <div class="map" id="main_map"></div>
 
+        <img class = "logo" src="{{ url_for('static',filename='logo.gif') }}" alt="logo">
+
+
         <script>
             function initMap() {
                 var options = {
@@ -123,8 +126,8 @@
                 markerGroups["covid"] = createMarkers( map,
                   {{ data["covid"]["latitudes"]|safe }},
                   {{ data["covid"]["longitudes"]|safe }},
-                  '#18db32',
-                  '#17f034',
+                  '#1FBF56',
+                  '#035A21',
                 );
 
                 markerGroups["crime"] = createMarkers( map,
@@ -155,7 +158,7 @@
         </script>
 
         <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKncgQLNzwyLXrvHW-S4ptv-ahJE8MUOE&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqoyYx0wxwpQEslzJAn4wTtwlZ0zx2j5I&callback=initMap">
       </script>
 
     </body>

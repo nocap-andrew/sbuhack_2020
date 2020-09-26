@@ -39,6 +39,14 @@ body {
     margin-left: -1em;
 }
 
+.logo {
+  height : 12em;
+  width: 12em;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+}
+
 
 form.userinput input[type=text] {
     padding: 10px;
