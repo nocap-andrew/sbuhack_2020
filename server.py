@@ -4,23 +4,23 @@ import json
 
 app = Flask(__name__)
 
+def import_data(type):
+    data = {}
+    with open(f"./data/{type}_data/latitudes.json", 'r') as json_file:
+        data["latitudes"] = json.load(json_file)
+    with open(f"./data/{type}_data/longitudes.json", 'r') as json_file:
+        data["longitudes"] = json.load(json_file)
+    return
 
 @app.route('/', methods = ["GET"])
-
 def main():
-    crimes = {}
-    with open("./data/latitudes.json", 'r') as json_file:
-        crimes["latitudes"] = json.load(json_file)
-    with open("./data/longtitudes.json", 'r') as json_file:
-        crimes["longtitudes"] = json.load(json_file)
+    data = {}
 
-    covid = {}
-    with open("./dataset/latitudes.json", 'r') as json_file:
-        covid["latitudes"] = json.load(json_file)
-    with open("./dataset/longtitudes.json", 'r') as json_file:
-        covid["longtitudes"] = json.load(json_file)
+    data["crimes"] = import_data("crimes")
+    data["covid"] = import_data("covid")
+    data["crushes"] = import_data("crushes")
 
-    return render_template("index.html", crimes = crimes, covid = covid)
+    return render_template("index.html", data = data)
 
 
 

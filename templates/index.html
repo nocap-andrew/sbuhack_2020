@@ -55,7 +55,7 @@
                         <li class="legend-item">
                             <div class="inline for-switch">
                                 <label class="switch">
-                                    <input type="checkbox" name="covid_toggle" id="covid_toggle" onchange="toggleGroup('covid')">
+                                    <input type="checkbox" name="covid_toggle" id="covid_toggle" checked="true" onchange="toggleGroup('covid')">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -128,19 +128,29 @@
 
                 var map = new google.maps.Map(document.getElementById('main_map'), options);
 
-                markerGroups["crime"] = createMarkers( map,
-                  {{ crimes["latitudes"]|safe }},
-                  {{crimes["longtitudes"]|safe}},
-                  '#e45252',
-                  '#ce3838',
-                );
-
                 markerGroups["covid"] = createMarkers( map,
-                  {{ covid["latitudes"]|safe }},
-                  {{ covid["longtitudes"]|safe }},
+                  {{ data["covid"]["latitudes"]|safe }},
+                  {{ data["covid"]["longitudes"]|safe }},
                   '#18db32',
                   '#17f034',
                 );
+
+                markerGroups["crime"] = createMarkers( map,
+                  {{ data["crimes"]["latitudes"]|safe }},
+                  {{ data["crimes"]["longitudes"]|safe}},
+                  '#e45252',
+                  '#ce3838',
+                );
+                toggleGroup('crime');
+
+                markerGroups["crushes"] = createMarkers( map,
+                  {{ data["crushes"]["latitudes"]|safe }},
+                  {{ data["crushes"]["longitudes"]|safe }},
+                  '#18db32',
+                  '#17f034',
+                );
+                toggleGroup('crushes');
+
 
             }
         </script>
