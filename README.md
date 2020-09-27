@@ -2,6 +2,8 @@
 
 ## Social Impact Track - Project MapSense
 
+### MapSense. "Destination? Set. Safe. Go."
+
 ### Our Team:
 
 -[**Andrei K**](https://github.com/nocap-andrew): Project Manager, Full Stack Developer;
@@ -43,5 +45,3 @@ MapSense is a versatile application providing users with useful information all 
 ### What's next for MapSense:
 
 Because the map depends on data made available by each city we are hoping to establish partnerships with government officials operating in the area. We have narrowed our focus on New York City for demonstration purposes but are looking to expand to other major cities all over the world. New features will include even more datasets and a news-source parsing algorithm to warn our users of the arising dangers.
-
-### MapSense. "Destination? Set. Safe. Go."
