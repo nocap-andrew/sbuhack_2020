@@ -4,22 +4,25 @@
 
 ### Our Team:
 
-[Andrei K](https://github.com/nocap-andrew): Project Manager, Full Stack Developer;
-[Artem Melnikov](https://github.com/Melnikovartem): Tech Lead, Full Stack Developer;
-[David Quach](https://github.com/dquach217): Data Analyst, Backend;
-[Mehvish Ali](https://github.com/MoonWishLion): UI Designer, Animator, Frontend.
+-[**Andrei K**](https://github.com/nocap-andrew): Project Manager, Full Stack Developer;
+
+-[**Artem Melnikov**](https://github.com/Melnikovartem): Tech Lead, Full Stack Developer;
+
+-[**David Quach**](https://github.com/dquach217): Data Analyst, Backend;
+
+-[**Mehvish Ali**](https://github.com/MoonWishLion): UI Designer, Animator, Frontend.
 
 ### Tech Stack:
 
 <p align="center">
   <img alt="python "src="https://img.shields.io/badge/python-003366?style=for-the-badge&logo=python&link=https://python.org">
-  <img alt="HTML" src="https://img.shields.io/badge/HTML-F54D33?style=for-the-badge&logoColor=white&logo=html5">
-  <img alt="CSS" src="https://img.shields.io/badge/CSS-6E20F5?style=for-the-badge&logo=css3">
-  <img alt="JAVASCRIPT" src="https://img.shields.io/badge/javascript-D9A600?style=for-the-badge&logoColor=white&logo=javascript">
-  <br>
   <img alt="Flask" src="http://img.shields.io/badge/Flask-373838?style=for-the-badge&logo=flask">
   <img alt="Jupyter" src="http://img.shields.io/badge/jupyter-E35C3D?style=for-the-badge&logoColor=white&logo=jupyter">
   <img alt="Google" src="http://img.shields.io/badge/Google%20Maps%20JS%20API-1aa3ff?style=for-the-badge&logoColor=white&logo=google">
+  <br>
+  <img alt="HTML" src="https://img.shields.io/badge/HTML-F54D33?style=for-the-badge&logoColor=white&logo=html5">
+  <img alt="CSS" src="https://img.shields.io/badge/CSS-6E20F5?style=for-the-badge&logo=css3">
+  <img alt="JAVASCRIPT" src="https://img.shields.io/badge/javascript-D9A600?style=for-the-badge&logoColor=white&logo=javascript">
 </p>
 
 
